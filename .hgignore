@@ -1,0 +1,7 @@
+# Use glob-style syntax
+syntax:glob
+# Files to ignore:
+*.swp
+*.swo
+*.pyc
+*.orig
