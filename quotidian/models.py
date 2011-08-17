@@ -15,7 +15,7 @@ class QuoteManager(models.Manager):
         quotes = self.all()
 
         if public_only:
-            quotes.filter(public=True)
+            quotes = quotes.filter(public=True)
 
         num_quotes = quotes.count()
         try:
