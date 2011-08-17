@@ -36,7 +36,7 @@ Using django-quotidian
 5. Add 'quotidian.context_processors.random_public_quote' to your project's
    TEMPLATE_CONTEXT_PROCESSORS setting.
 
-Your template context will now include a variable named "a-quote" with the
+Your template context will now include a variable named "random_quote" with the
 following attributes:
 
 * id                - The quote's database primary key.
