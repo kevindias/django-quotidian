@@ -1,0 +1,26 @@
+[
+    {
+        "pk": 1, 
+        "model": "quotidian.quote", 
+        "fields": {
+            "created": "2011-08-23 15:08:29", 
+            "detailed_citation": "Detail1", 
+            "modified": "2011-08-23 15:08:38", 
+            "content": "Content1", 
+            "source": "Source1", 
+            "public": true
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "quotidian.quote", 
+        "fields": {
+            "created": "2011-08-23 15:08:56", 
+            "detailed_citation": "Detail2", 
+            "modified": "2011-08-23 15:09:02", 
+            "content": "Content2", 
+            "source": "Source2", 
+            "public": false
+        }
+    }
+]
