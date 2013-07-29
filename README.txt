@@ -5,9 +5,9 @@ Summary
 -------
 
 This very simple application provides a way to stick a "quote" object into
-the context of your [Django][1] templates. Quotes are currently selected at
-random from the quotidian_quote database table ignoring any rows with the "public"
-field set to False.
+the context of your [Django][1] templates. Quotes are selected at random from
+the quotidian_quote database table ignoring any rows with the "public" field
+set to False.
 
 [1]: http://www.djangoproject.com/ "Django Project"
 
@@ -24,7 +24,6 @@ You can run the following command in the django-quotidian directory:
 You can also put the included quotidian directory on your Python path,
 or symlink to it from somewhere on your Python path.
 
-
 Using django-quotidian
 ----------------------
 
@@ -32,12 +31,41 @@ Using django-quotidian
 2. Create the quotidian_quote database table using manage.py syncdb.
 3. Populate the new database table with whatever quotations, testimonials,
    hints, tips or snippets you want to use.
-4. Add 'quotidian' to your project's INSTALLED_APPS setting.
-5. Add 'quotidian.context_processors.random_public_quote' to your project's
-   TEMPLATE_CONTEXT_PROCESSORS setting.
+4. Add "quotidian" to your project's INSTALLED_APPS setting.
+5. You can now choose between using quotidian's context processor or template
+   tag, or both.
 
-Your template context will now include a variable named "random_quote" with the
-following attributes:
+### Context processor ###
+
+This adds a variable named "quotidian_quote" with the attributes described in
+the 'Quote object attributes' section to the template context of every request.
+
+Add 'quotidian.context_processors.random_public_quote' to your project's
+TEMPLATE_CONTEXT_PROCESSORS setting to activate the context processor.
+
+### Template tag ###
+
+If you only want to use quotidian on a few pages of your site and don't want
+the overhead of running the context processor for every request then use
+quotidian's template tag instead. This also lets you add filters to select
+specific quotes or inlcude multiple quotes on a page, things you can't do with
+the context processor.
+
+To use the template tag, load the quotidian template library with
+`{% load quotidian_tags %}` at the top of your template. You can then inlcude 
+a quote on your page by using the `{% random_quote %}` tag. 
+
+You can override `templates/quotidian/quotidian_quote.html` if you need to
+customize the quote's template fragment.
+
+The 'random_quote' tag accepts keyword arguments in the same format as Django's
+queryset filter method which are used to restrict the pool of quotes quotidian
+selects from. For example, use `{% random_quote source__contains='John' %} to
+select a random quote from all (public) quotes with a source containing the
+string 'John'.
+
+Quote object attributes
+-----------------------
 
 * id                - The quote's database primary key.
 * source            - Intended as a short attribution for the quote's contents.
@@ -53,4 +81,5 @@ following attributes:
 Reporting problems or suggesting improvements
 ---------------------------------------------
 
-Please use the issue tracker at the project's Bitbucket repository: [https://bitbucket.org/dias.kev/django-quotidian]
+Please use the issue tracker at the project's Bitbucket repository:
+[https://bitbucket.org/dias.kev/django-quotidian]
