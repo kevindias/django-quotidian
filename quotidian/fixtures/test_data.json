@@ -22,5 +22,17 @@
             "source": "Source2", 
             "public": false
         }
+    },
+    {
+        "pk": 3, 
+        "model": "quotidian.quote", 
+        "fields": {
+            "created": "2013-07-28 13:05:00", 
+            "detailed_citation": "Detail3", 
+            "modified": "2013-07-28 13:05:00", 
+            "content": "Content3", 
+            "source": "Source3", 
+            "public": true
+        }
     }
 ]

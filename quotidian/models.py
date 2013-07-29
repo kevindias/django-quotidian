@@ -4,18 +4,18 @@ from django.db import models
 
 
 class QuoteManager(models.Manager):
-    def get_random(self, public_only=True):
+    def get_random(self, **kwargs):
         """
-        Returns a 'random' quote.
+        Returns a 'random' (optionally filtered) quote.
 
         This method of retreiving a random record is used instead of Django's
         order_by('?') because of how slow that can be for some databases.
 
         """
-        quotes = self.all()
+        filters = {'public': True}
+        filters.update(**kwargs)
+        quotes = self.filter(**filters)
 
-        if public_only:
-            quotes = quotes.filter(public=True)
 
         num_quotes = quotes.count()
         try:
