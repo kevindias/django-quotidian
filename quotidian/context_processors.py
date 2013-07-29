@@ -9,4 +9,4 @@ def random_public_quote(request):
 
     """
     quote = Quote.objects.get_random()
-    return {'random_quote': quote}
+    return {'quotidian_quote': quote}
