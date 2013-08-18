@@ -17,12 +17,28 @@ Installing django-quotidian
 
 There are several ways to install this application.
 
-You can run the following command in the django-quotidian directory:
+### Using pip or easy_install ###
+
+Pip is the recommended package-installation tool for Python. To install
+django-quotidian with pip, use the command:
+
+    pip install django-quotidian
+
+If you prefer to use easy_install then replace `pip` with `easy_install`
+in the above command.
+
+To install the latest in-development version (which may not be stable) directly
+from the project's Git repository you can use the command:
+
+    pip install -e git+ssh://git@bitbucket.org/dias.kev/django-quotidian#egg=quotidian
+
+### Using setuptools ###
+
+Download the package source code or distribution tarball and then run the
+following command in the django-quotidian directory:
 
     python setup.py install
 
-You can also put the included quotidian directory on your Python path,
-or symlink to it from somewhere on your Python path.
 
 Using django-quotidian
 ----------------------
@@ -60,9 +76,10 @@ customize the quote's template fragment.
 
 The 'random_quote' tag accepts keyword arguments in the same format as Django's
 queryset filter method which are used to restrict the pool of quotes quotidian
-selects from. For example, use `{% random_quote source__contains='John' %} to
+selects from. For example, use `{% random_quote source__contains='John' %}` to
 select a random quote from all (public) quotes with a source containing the
 string 'John'.
+
 
 Quote object attributes
 -----------------------
