@@ -3,4 +3,5 @@
 *.swo
 *.pyc
 *.orig
-django_quotidian.egg-info*
+/*.egg-info
+/dist/

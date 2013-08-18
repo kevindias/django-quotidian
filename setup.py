@@ -1,11 +1,11 @@
-from distutils.core import setup
+from setuptools import setup
 
 
 setup(name='django-quotidian',
-      version='0.1',
+      version='0.2',
       author='Kevin Dias',
       author_email='kevin@kevindias.com',
-      url='https://bitbucket.org/dias.kev/django-quotidian/',
+      url='http://kevindias.com/projects/quotidian/',
       description='Adds snippets of text to your Django templates.',
       packages=['quotidian'],
       classifiers=['Development Status :: 3 - Alpha',
@@ -16,4 +16,5 @@ setup(name='django-quotidian',
                    'Programming Language :: Python',
                    'Framework :: Django',
                    'Topic :: Utilities'],
-     )
+      zip_safe=False,
+)
