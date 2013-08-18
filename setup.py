@@ -2,7 +2,7 @@ from setuptools import setup
 
 
 setup(name='django-quotidian',
-      version='0.2',
+      version='0.2.1',
       author='Kevin Dias',
       author_email='kevin@kevindias.com',
       url='http://kevindias.com/projects/quotidian/',
