@@ -29,7 +29,7 @@ in the above command.
 To install the latest in-development version (which may not be stable) directly
 from the project's Git repository you can use the command::
 
-    pip install -e git+ssh://git@bitbucket.org/dias.kev/django-quotidian#egg=quotidian
+    pip install -e git+https://bitbucket.org/dias.kev/django-quotidian.git#egg=quotidian
 
 Using setuptools
 ^^^^^^^^^^^^^^^^
