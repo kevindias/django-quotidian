@@ -34,8 +34,8 @@ class QuoteModelTests(TestCase):
         self.assertEqual(filter_detail, filter_source)
 
         filter_date = Quote.objects.get_random(public=False,
-                                               created__gte='2011-08-23 15:08:50',
-                                               created__lte='2011-08-23 15:08:59')
+                                               created__gte='2011-08-23T15:08:50Z',
+                                               created__lte='2011-08-23T15:08:59Z')
         filter_content = Quote.objects.get_random(public=False,
                                                     content='Content2')
         self.assertEqual(filter_date, filter_content)

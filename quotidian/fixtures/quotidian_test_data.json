@@ -3,9 +3,9 @@
         "pk": 1, 
         "model": "quotidian.quote", 
         "fields": {
-            "created": "2011-08-23 15:08:29", 
+            "created": "2011-08-23T15:08:29Z", 
             "detailed_citation": "Detail1", 
-            "modified": "2011-08-23 15:08:38", 
+            "modified": "2011-08-23T15:08:38Z", 
             "content": "Content1", 
             "source": "Source1", 
             "public": true
@@ -15,9 +15,9 @@
         "pk": 2, 
         "model": "quotidian.quote", 
         "fields": {
-            "created": "2011-08-23 15:08:56", 
+            "created": "2011-08-23T15:08:56Z", 
             "detailed_citation": "Detail2", 
-            "modified": "2011-08-23 15:09:02", 
+            "modified": "2011-08-23T15:09:02Z", 
             "content": "Content2", 
             "source": "Source2", 
             "public": false
@@ -27,9 +27,9 @@
         "pk": 3, 
         "model": "quotidian.quote", 
         "fields": {
-            "created": "2013-07-28 13:05:00", 
+            "created": "2013-07-28T13:05:00Z", 
             "detailed_citation": "Detail3", 
-            "modified": "2013-07-28 13:05:00", 
+            "modified": "2013-07-28T13:05:00Z", 
             "content": "Content3", 
             "source": "Source3", 
             "public": true
