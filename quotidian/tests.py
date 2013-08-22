@@ -7,7 +7,7 @@ class QuoteModelTests(TestCase):
     Tests for the Quote model and manager.
 
     """
-    fixtures = ['test_data.json']
+    fixtures = ['quotidian_test_data.json']
 
     def test_random_public_only(self):
         """
